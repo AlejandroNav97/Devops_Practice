@@ -1,0 +1,10 @@
+version: 0.0
+
+Resources:
+- TargetService:
+Type: AWS::ECS::SERVICE
+Properties:
+ TaskDefinitions: <TASK_DEFINITION>
+ LoadBalancerInfo:
+ ContainerName: zemoga-webapp-production-container-blue
+ ContainerPort: 80
